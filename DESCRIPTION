@@ -1,19 +1,23 @@
-Package: RUVSeq
-Version: 1.33.1
-Title: Remove Unwanted Variation from RNA-Seq Data
-Description: This package implements the remove unwanted variation methods for the normalization of RNA-Seq read counts between samples.
-Authors@R: c(person("Songchen", "Yang", email = "songchen@post.bgu.ac.il",
-	          role = c("aut", "cre", "cph"), 
-                  person("Songchen",role = c("aut","cre")))
-Author: Songchen Yang [aut, cre, cph]
-Maintainer: Songchen Yang <songchen@post.bgu.ac.il>
-Date: 9-15-2025
-Imports: methods, MASS
-Depends: Biobase, limma, DEseq2, sva
-Suggests: BiocStyle, knitr, RColorBrewer,  DESeq2
-License: Artistic-2.0
-LazyLoad: yes
-biocViews: DifferentialExpression, Preprocessing, RNASeq, Software
+Package: RemoveUnwantedVariance
+Type: Package
+Title: Remove Unwanted Variation from High-Throughput Genomic Data
+Version: 1.0.0
+Author: Songchen Yang [aut, cre]
+Description: A toolkit for identifying and removing unwanted technical/biological variation from high-throughput genomic data, particularly RNA-Seq datasets. Implements robust normalization methods using housekeeping genes to correct for batch effects and other biological variation, enabling more accurate downstream differential expression analysis.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    stats,
+    utils,
+    tidyverse,
+    limma,
+    sva,
+    DESeq2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+RoxygenNote: 7.3.2
 URL: https://github.com/SCYangcode/RemoveUnwantedVariance
-
-
+BugReports: https://github.com/SCYangcode/RemoveUnwantedVariance/issues

@@ -1,4 +1,8 @@
+### Introduction
 
+**RemoveUnwantedVariance** is an R package designed for cross-batch normalization of genomic data in the absence of spike-in controls. It effectively removes technical batch effects while preserving biological signals through intrinsic gene-based normalization methods.
+
+A key application of the package lies in addressing confounded study designs where biological conditions of interest are non-overlapping across technical batches—for instance, when Condition A is exclusive to Batch 1 and Condition B to Batch 2. In such scenarios, **RemoveUnwantedVariance ** enables robust differential expression analysis by disentangling biological signals from technical batch effects, facilitating reliable comparisons even in the presence of fully confounded experimental structures.
 
 ### Installation
 
@@ -12,8 +16,7 @@ devtools::install_github("SCYangcode/RemoveUnwantedVariance")
 #### Normalized the samples from different sequencing batches without spike in 
 
 ```R
-## If you have samples from different batches, and you don't have the same conditions in different batches, but you'd like to compare the gene expression in conditionA which only exist in batch 1 and conditionB which only exist in batch2.  
-
+## Normalization
 count_batch1=count_batch1
 count_batch2=count_batch2
 geneLength=geneLength
@@ -45,7 +48,7 @@ dds<-DESeq(deseq2.obj)
 #### Remove unwanted variance within groups
 
 ```r
-## if there are individual variances in group, please follow the steps:
+## If there are individual variances in group, please follow the steps:
 group<-as.factor(c(rep(c("A", "B"), each=3),rep(c("A", "B"), each=3)))
 batches<-as.factor(rep("B1", "B2"), each=6)
 MM_counts<-cbind(rowcounts1, rowcounts2)
