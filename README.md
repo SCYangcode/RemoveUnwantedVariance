@@ -2,7 +2,7 @@
 
 The **RemoveUnwantedVariance** method provides significant practical benefits:
 
-1. **Spike-In Free Normalization:** It eliminates the need for external spike-in controls by leveraging intrinsic genomic features, such as housekeeping genes, making it more accessible and cost-effective.
+1. **Spike-In Free Normalization:** It eliminates the need for external spike-in controls by leveraging intrinsic genomic features making it more accessible and cost-effective.
 2. **Handles Non-Overlapping Designs:** It is uniquely capable of correcting for batch effects in complex experimental designs where the same biological conditions are not present in all batches, thus overcoming a major limitation of many other batch-correction tools.
 3. **Universal Compatibility:** Delers a standardized matrix that works seamlessly with all common differential expression tools.
 
