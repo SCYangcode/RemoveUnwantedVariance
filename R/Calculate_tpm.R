@@ -1,3 +1,9 @@
+#' Calculate TPM From Raw Counts
+#'
+#' @param count Expression Matrix
+#' @param geneLength Matrix of Gene Length
+#' @return A TPM Matrix
+#' @export
 Calculate_tpm<-function(count, geneLength){
   zz<-intersect(rownames(count), rownames(geneLength))
   count<-count[zz,]

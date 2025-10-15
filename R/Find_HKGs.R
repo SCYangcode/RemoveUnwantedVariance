@@ -1,3 +1,9 @@
+#' Identify The House Keep genes
+#'
+#' @param tpm TPM matrix
+#' @param n Number of House Keep Genes Obtained From the Analysis
+#' @return Vector Contains House Keep Genes
+#' @export
 Find_HKGs<-function(tpm, n){
   CV <- function(x){sd(x)/mean(x)}
   tpm.numeric<-apply(tpm, 2, as.numeric)

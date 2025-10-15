@@ -1,5 +1,17 @@
-NormalizeCount<-function(x, HKGs, k, drop=0, center=TRUE, round=TRUE, epsilon=1, tolerance=1e-8, isLog=FALSE) {
-  
+#' Remove Unwanted Variation from RNA-Seq Data
+#'
+#' @param x Expression matrix
+#' @param HKGs Housekeeping genes indices
+#' @param k Number of factors to remove
+#' @return A list with normalized counts and factors
+#' @export
+NormalizeCount<-function(x, HKGs, k) {
+    drop=0
+    center=TRUE
+    round=TRUE
+    epsilon=1
+    tolerance=1e-8
+    isLog=FALSE
   if(!isLog && !all(sapply(x, is.numeric))) {
     warning(paste0("The expression matrix does not contain counts.\n",
                    "Please, pass a matrix of counts (not logged) or set isLog to TRUE to skip the log transformation"))

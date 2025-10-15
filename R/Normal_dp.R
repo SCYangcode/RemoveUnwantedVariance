@@ -1,3 +1,9 @@
+#' Remove Variance Within Group
+#'
+#' @param x Expression matrix
+#' @param group Factor Vector Indicates Sample's Group
+#' @return Normalized matrix
+#' @export
 Normal_dp<-function(x, group){
   keep <- rowSums(x >= 10) >= 2
   dds <- x[keep, ] %>% as.matrix()
