@@ -1,6 +1,6 @@
 ### Introduction
 
-**RemoveUnwantedVariance** is an R package designed for cross-batch normalization of genomic data in the absence of spike-in controls. It effectively removes technical batch effects while preserving biological signals through intrinsic gene-based normalization methods.
+**RemoveUnwantedVariance** is an R package designed for batch normalization of genomic data in the absence of spike-in controls. It effectively removes technical batch effects while preserving biological signals through intrinsic gene-based normalization methods.
 
 A key application of the package lies in addressing confounded study designs where biological conditions of interest are non-overlapping across technical batches—for instance, when Condition A is exclusive to Batch 1 and Condition B to Batch 2. In such scenarios, **RemoveUnwantedVariance ** enables robust differential expression analysis by disentangling biological signals from technical batch effects, facilitating reliable comparisons even in the presence of fully confounded experimental structures.
 
