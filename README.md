@@ -16,10 +16,10 @@ devtools::install_github("SCYangcode/RemoveUnwantedVariance")
 ### Usages
 
 ##### Normalized the samples from different sequencing batches without spike in 
-######### The rowname of geneLength shall be the gene features names. The only column shall be the the lengths of gene features 
-######### The rowname of count matrix shall be the gene features names.
 
 ```R
+######### The rowname of geneLength shall be the gene features names. The only column shall be the the lengths of gene features 
+######### The rowname of count matrix shall be the gene features names.
 ## Normalization
 count_batch1=count_batch1
 count_batch2=count_batch2
